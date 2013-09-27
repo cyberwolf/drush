@@ -96,7 +96,6 @@ function drush_di_container_dump($path) {
     return drush_set_error('DRUSH_DI_DUMPER_EXCEPTION', dt('An exception occurred while dumping the DI container. Message: !message', array('!message' => $e->getMessage())));
   }
 
-  // @todo Error handling for inaccessible files etc.
   if (!is_writable($path)) {
     return drush_set_error('DRUSH_DI_PATH_NOT_WRITABLE', dt('Unable to write to file !file.', array('!file' => $path)));
   }
